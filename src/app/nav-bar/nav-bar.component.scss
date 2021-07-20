@@ -1,3 +1,5 @@
+@import "bootstrap/scss/bootstrap.scss";
+
 ol,
 ul {
   padding-left: 2rem;
@@ -15,68 +17,6 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
-}
-
-#mainNav {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
-  transition: background-color 0.2s ease;
-}
-#mainNav .navbar-brand {
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #212529;
-}
-#mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.75rem 0;
-}
-#mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
-}
-#mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
-}
-@media (min-width: 992px) {
-  #mainNav {
-    box-shadow: none;
-    background-color: transparent;
-  }
-  #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  #mainNav .navbar-brand:hover {
-    color: #fff;
-  }
-  #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0 1rem;
-  }
-  #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
-  }
-  #mainNav .navbar-nav .nav-item:last-child .nav-link {
-    padding-right: 0;
-  }
-  #mainNav.navbar-shrink {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    color: #212529;
-  }
-  #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f4623a;
-  }
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
-    color: #212529;
-  }
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
-  }
 }
 
 .btn {
@@ -143,4 +83,83 @@ button {
 
 .navbar-toggler:hover {
   background-color: bg-light;
+}
+
+#mainNav {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.2s ease;
+
+  font-family:  "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  .navbar-brand {
+    color: fade-out(rgb(0, 0, 0), 0.3);
+
+    &:hover {
+      color:  #f4623a !important;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+        .nav-link {
+            color: fade-out(rgb(206, 206, 206), 0.3);
+            padding: 0.75rem 0;
+
+            &:hover {
+              color:  rgb(219, 144, 4) !important;
+            }
+        }
+
+        &:last-child {
+            .nav-link {
+                padding-right: 0;
+            }
+        }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+      // Base styling for the navbar - screen sizes greater than the large breakpoint
+      box-shadow: none;
+      background-color: transparent;
+
+      .navbar-brand {
+          color: fade-out(rgb(0, 0, 0), 0.3);
+
+          &:hover {
+            color:  #f4623a !important;
+          }
+      }
+
+      .navbar-nav {
+          .nav-item {
+              .nav-link {
+                  color: fade-out(rgb(206, 206, 206), 0.3);
+                  padding: 0 1rem;
+
+                  &:hover {
+                    color:  rgb(219, 144, 4) !important;
+                  }
+              }
+
+              &:last-child {
+                  .nav-link {
+                      padding-right: 0;
+                  }
+              }
+          }
+      }
+
+      // Navbar styling applied when the page is scrolled
+      &.navbar.shrink {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background-color: rgb(255, 255, 255);
+
+      }
+  }
 }
