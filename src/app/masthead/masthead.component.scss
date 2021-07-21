@@ -49,19 +49,18 @@ header.masthead {
   }
 }
 
-.carousel-inner {
-  padding: 1em;
-}
-
 .carousel-caption {
   transform: translateY(-50%);
   bottom: initial;
   top: 45%;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 800px) {
   .carousel-caption {
     top: 50%;
+  }
+  .carousel-inner {
+    padding: 5em;
   }
 }
 
