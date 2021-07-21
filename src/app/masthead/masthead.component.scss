@@ -53,7 +53,7 @@ header.masthead {
   top: 45%;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 800px) {
   .carousel-caption {
     top: 50%;
   }
