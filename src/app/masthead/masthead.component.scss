@@ -23,6 +23,7 @@ h1, .h1 {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - #{4.5rem});
+  padding-right: 1em;
 
   background:
   url("../../assets/slides/bg.jpg");
@@ -48,10 +49,20 @@ header.masthead {
   }
 }
 
+.carousel-inner {
+  padding: 1em;
+}
+
 .carousel-caption {
   transform: translateY(-50%);
   bottom: initial;
   top: 45%;
+}
+
+@media (min-width: 500px) {
+  .carousel-caption {
+    top: 50%;
+  }
 }
 
 hr {

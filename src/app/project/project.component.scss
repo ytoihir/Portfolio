@@ -9,3 +9,14 @@
   //box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.linkPhoto {
+  a {
+    color: rgba(0, 0, 255, .2);
+  }
+  a:hover {
+    color: rgba(0, 0, 255, .2);
+  }
+ text-align: right;
+ bottom: 0;
+}
