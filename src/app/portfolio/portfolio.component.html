@@ -1,103 +1,41 @@
 <div id="portfolio" class="bg-dark">
   <div class="container container-fluid">
-  <div class="row no-gutters">
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project1.png" title="Ventes de véhicules">
-        <img class="img-fluid" src="././assets/portfolio/project1.png" alt="..." />
+  <div class="row no-gutters" *ngFor="let projectsGroup of projectsBis;">
+    <div class="col portfolio-box" *ngFor="let project of projectsGroup">
+      
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-link" title={{project.title}} data-toggle="modal" [attr.data-target]="'#'+ project.subtitle">
+
+        <img class="img-fluid imgCover" src={{project.img}} alt="..." />
         <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Java</div>
-            <div class="project-name">Ventes de véhicules</div>
+            <div class="project-category text-white-50">{{project.title}}</div>
+            <div class="project-name">{{project.subtitle}}</div>
         </div>
-      </a>
-    </div>
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project2.PNG" title="War Game">
-        <img class="img-fluid" src="././assets/portfolio/project2.PNG" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Java</div>
-            <div class="project-name">War Game</div>
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id={{project.subtitle}} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{project.title}} : {{project.subtitle}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img class="img-fluid" src={{project.img}} alt="..." />
+              <br>
+              <br>
+              <div class="description" [innerHTML]="project.description"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+          </div>
         </div>
-      </a>
-    </div>
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project3.png" title="Apprentissage des langues">
-        <img class="img-fluid" src="././assets/portfolio/project3.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Android Studio</div>
-            <div class="project-name">Apprentissage des langues</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-<div class="container container-fluid">
-  <div class="row no-gutters">
-  <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project4.png" title="Crossy Road-Like">
-        <img class="img-fluid" src="././assets/portfolio/project4.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Python</div>
-            <div class="project-name">Crossy Road-Like</div>
-        </div>
-      </a>
-    </div>
-  <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project5.png" title="Terraria-Like">
-        <img class="img-fluid" src="././assets/portfolio/project5.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Java</div>
-            <div class="project-name">Terraria-Like</div>
-        </div>
-      </a>
-    </div>
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project6.png" title="Jeu de dames">
-        <img class="img-fluid" src="././assets/portfolio/project6.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet C</div>
-            <div class="project-name">Jeu de dames</div>
-        </div>
-      </a>
-    </div>
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project7.png" title="Pong">
-        <img class="img-fluid" src="././assets/portfolio/project7.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Python</div>
-            <div class="project-name">Pong</div>
-        </div>
-      </a>
+      </div>
     </div>
   </div>
 </div>
-    <div class="container container-fluid">
-      <div class="row no-gutters">
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project8.png" title="Site de culture asiatique">
-        <img class="img-fluid" src="././assets/portfolio/project8.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet PHP</div>
-            <div class="project-name">Site de culture asiatique</div>
-        </div>
-      </a>
-    </div>
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project9.png" title="Gestion d'un ciné-club">
-        <img class="img-fluid" src="././assets/portfolio/project9.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet Python</div>
-            <div class="project-name">Gestion d'un ciné-club</div>
-        </div>
-      </a>
-    </div>
-    <div class="col">
-      <a class="portfolio-box" href="././assets/portfolio/project10.png" title="Jeu Rummikub">
-        <img class="img-fluid" src="././assets/portfolio/project10.png" alt="..." />
-        <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Projet C</div>
-            <div class="project-name">Jeu Rummikub</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
+
+

@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 small, .small {
   font-size: 0.875em;
 }
@@ -12,8 +16,9 @@ small, .small {
 
 a {
   border: none;
+  color: #696969;
 }
 
 a:hover {
-  background-color: orange;
+  color: orange;
 }
