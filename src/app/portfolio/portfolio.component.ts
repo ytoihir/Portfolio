@@ -19,7 +19,7 @@ export class PortfolioComponent implements OnInit {
         title: "Projet Java",
         subtitle: "War Game",
         img: "././assets/portfolio/project2.PNG",
-        description: "L’objectif du projet est de réaliser un jeu de guerre de type WarGames. Ce type de jeu est apparu dans les années 1950. <br> Le développement du Wargame sera réalisé en langage JAVA version 16 sous l’IDE Eclipse et en utilisant la bibliothèque graphique SWING."
+        description: "L’objectif du projet est de réaliser un jeu de guerre de type WarGames. Ce type de jeu est apparu dans les années 1950. <br> Le développement du Wargame a été réalisé en langage JAVA version 16 sous l’IDE Eclipse et en utilisant la bibliothèque graphique SWING."
       },
       {
         title: "Projet Android Studio",
@@ -73,7 +73,7 @@ export class PortfolioComponent implements OnInit {
 
     projectsBis: any;
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit(): void {
